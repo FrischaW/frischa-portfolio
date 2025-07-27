@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Shoping</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div class="calculator-container">
-        <h1>Kalkulator</h1>
-        <input type="text" id="display" disabled />
-        <div class="button">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="append('+')">+</button>
-            <button onclick="append('*')">×</button>
-            <button onclick="backspace()">⌫</button>
+    <div class="container">
+        <h1 class="title">🛒Frischa Shop</h1>
 
-            <button onclick="append('7')">7</button>
-            <button onclick="append('8')">8</button>
-            <button onclick="append('9')">9</button>
-            <button onclick="append('-')">-</button>
+        <form id="form">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama Anda"/>
+            </div>
 
-            <button onclick="append('4')">4</button>
-            <button onclick="append('5')">5</button>
-            <button onclick="append('6')">6</button>
-            <button onclick="append('/')">÷</button>
+            <div class="form-group">
+                <label for="produk">Pilih Produk</label>
+                <select id="product">
+                    <option value="">-- Pilih Produk --</option>
+                    <option value="Tas"> Tas - Rp100.000</option>
+                    <option value="Sepatu">Sepatu - Rp150.000</option>
+                </select>
+            </div>
 
-            <button onclick="append('1')">1</button>
-            <button onclick="append('2')">2</button>
-            <button onclick="append('3')">3</button>
-            <button class="equal" onclick="calculate()">=</button>
+            <button type="submit">Pesan Sekarang</button>
 
-            <button onclick="append('0')">0</button>
-            <button onclick="append('.')">.</button>
-        </div>
+        </form>
+
+        <script src="script.js"></script>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

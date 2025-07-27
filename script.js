@@ -1,21 +1,16 @@
-let display = document.getElementById("display");
+form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Hindari reload
 
-function append(value) {
-    display.value += value;
-}
+    const nama = namaInput.value.trim();
+    const produk = produkInput.value;
 
-function clearDisplay() {
-    display.value = "";
-}
+    const namaRegex = /^[A-Za-z\s]+$/;
 
-function backspace() {
-    display.value = display.value.slice(0, -1);
-}
-
-function calculate() {
-    try {
-        display.value = eval(display.value);
-    } catch (error) {
-        alert("Perhitungan tidak valid!");
+    if (!nama||!produk) {
+        output.innerHTML ='<strong>Semua field wajib diisi</strong>';
+        output.style.display = "block";
+        return;
     }
-}
+
+    alert(`Pesanan berhasil!\nNama: ${nama}\nProduk: ${produk}`);
+});
